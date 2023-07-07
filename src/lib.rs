@@ -2,11 +2,10 @@
  * Utility for random grouping.
  */
 
-pub mod random_grouping;
-pub mod size_rounding;
-
-pub use self::random_grouping::RandomGrouping;
-pub use self::size_rounding::SizeRounding;
-
+mod random_grouping;
+mod size_rounding;
 mod sized_iter;
 mod staff;
+
+pub use crate::random_grouping::RandomGrouping;
+pub use size_rounding::SizeRounding;

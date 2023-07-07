@@ -29,7 +29,9 @@ for i in 0..result.len() {
 
 ## What's New
 
-Version 0.2 has the following changes.
+Version 0.2.1 is update for code refactoring.
+
+Version 0.2.0 has the following changes.
 
 * The default value of `stable` has been changed to `true` from `false`.
 * The first argument of `divide_by_size` and `divide_by_ratio` is changed to

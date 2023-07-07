@@ -126,9 +126,10 @@ impl<'r> RandomGrouping<'r> {
         let mut table = BTreeMap::new();
         let idxs = sample(&mut *self.rng, samples_len, select_len).into_vec();
         let group_areas = sizes.iter().cloned().trace2(0, |total, size| total + size);
-        let group_ranges = group_areas.map(|(total, size)| (total - size)..total);
+        let group_ranges = group_areas.map(|(lower, upper)| lower..upper);
 
         for (group_idx, group_range) in group_ranges.enumerate() {
+            dbg!(&group_range);
             for &group_item_idx in &idxs[group_range] {
                 table.insert(group_item_idx, group_idx);
             }
@@ -219,8 +220,8 @@ impl<'r> RandomGrouping<'r> {
         let mut idxs = sample(&mut *self.rng, len, amount).into_vec();
         let mut results = Vec::with_capacity(sizes.len());
 
-        for (total, size) in sizes.iter().cloned().trace2(0, |total, size| total + size) {
-            let group_range = (total - size).min(samples.len())..total;
+        for (lower, upper) in sizes.iter().cloned().trace2(0, |total, size| total + size) {
+            let group_range = lower..upper;
             let group_item_idxs = sort_if(self.stable, &mut idxs[group_range]);
             let group_items = from_idxs(samples, group_item_idxs);
             results.push(group_items);
