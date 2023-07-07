@@ -1,6 +1,6 @@
 [package]
 name = "random_grouping"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Nossie531"]
 edition = "2021"
 description = "Utility for random grouping."
@@ -9,7 +9,6 @@ license = "MIT OR Apache-2.0"
 keywords = ["rand", "grouping"]
 
 [dependencies]
-nameof = "1.2.2"
 simple_scan = "0.1"
 rand = "0.8"
 rand_pcg = "0.3"

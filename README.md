@@ -26,3 +26,13 @@ for i in 0..result.len() {
     assert!(result[i].iter().all(|x| samples.contains(x)));
 }
 ```
+
+## What's New
+
+Version 0.2 has the following changes.
+
+* The default value of `stable` has been changed to `true` from `false`.
+* The first argument of `divide_by_size` and `divide_by_ratio` is changed to
+  `IntoIterator` from slice.
+* Instead, `divide_slice_by_size` and `divide_slice_by_ratio` are introduced
+  (which are faster for slices).
