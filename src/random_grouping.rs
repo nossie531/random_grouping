@@ -129,7 +129,6 @@ impl<'r> RandomGrouping<'r> {
         let group_ranges = group_areas.map(|(lower, upper)| lower..upper);
 
         for (group_idx, group_range) in group_ranges.enumerate() {
-            dbg!(&group_range);
             for &group_item_idx in &idxs[group_range] {
                 table.insert(group_item_idx, group_idx);
             }
