@@ -10,11 +10,13 @@ pub enum Staff<'a, T: ?Sized + 'a> {
 
 impl<'a, T: ?Sized> Staff<'a, T> {
     /// Create owned instance.
+    #[must_use]
     pub fn new_own(x: Box<T>) -> Self {
         Self::Own(x)
     }
 
     /// Create borrowed instance.
+    #[must_use]
     pub fn new_borrow(x: &'a mut T) -> Self {
         Self::Borrow(x)
     }

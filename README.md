@@ -29,11 +29,15 @@ for i in 0..result.len() {
 
 ## What's New
 
-At Version 0.2.3
+v0.3.0
+
+* `must_use` annotations are added at `RandomGrouping`.
+
+v0.2.3
 
 * Bug fix: Remove unwanted Debug output.
 
-At Vrrsion 0.2.0
+v0.2.0
 
 * The default value of `stable` has been changed to `true` from `false`.
 * The first argument of `divide_by_size` and `divide_by_ratio` is changed to

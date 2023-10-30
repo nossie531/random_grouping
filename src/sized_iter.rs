@@ -5,6 +5,7 @@
 /// of `size_hint` already. Otherwise, this adapter collects all elements from
 /// the original iterator to create a vector and generates an iterator to it.
 /// With this, `size_hint` upper bound is always available in both cases.
+#[must_use]
 pub struct SizedIter<'a, T> {
     src_iter: Option<&'a mut dyn Iterator<Item = T>>,
     vec_iter: Option<<Vec<T> as IntoIterator>::IntoIter>,

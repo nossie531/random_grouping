@@ -42,11 +42,13 @@ pub struct RandomGrouping<'r> {
 
 impl<'r> RandomGrouping<'r> {
     /// Creates an instance with default random number seed.
+    #[must_use]
     pub fn new() -> Self {
         Self::default()
     }
 
     /// Creates an instance with volatile random number seed.
+    #[must_use]
     pub fn auto_seed() -> Self {
         Self {
             rng: Staff::new_own(Box::<ThreadRng>::default()),
@@ -55,6 +57,7 @@ impl<'r> RandomGrouping<'r> {
     }
 
     /// Creates an instance with the specified random number saed.
+    #[must_use]
     pub fn from_seed(seed: u64) -> Self {
         Self {
             rng: Staff::new_own(Box::new(Pcg32::seed_from_u64(seed))),
@@ -63,6 +66,7 @@ impl<'r> RandomGrouping<'r> {
     }
 
     /// Creates an instance with the specified random number generator.
+    #[must_use]
     pub fn from_rng(rng: &'r mut dyn RngCore) -> Self {
         Self {
             rng: Staff::new_borrow(rng),
@@ -73,6 +77,7 @@ impl<'r> RandomGrouping<'r> {
     /// Returns `true` if original order is keeped at grouping.
     ///
     /// Default value is `true`.
+    #[must_use]
     pub fn stable(&self) -> bool {
         self.stable
     }
@@ -80,6 +85,7 @@ impl<'r> RandomGrouping<'r> {
     /// Returns rounding strategy for group size.
     ///
     /// Default value is [`Floor`](SizeRounding::Floor).
+    #[must_use]
     pub fn rounding(&self) -> SizeRounding {
         self.rounding
     }

@@ -1,6 +1,6 @@
 [package]
 name = "random_grouping"
-version = "0.2.3"
+version = "0.3.0"
 authors = ["Nossie531"]
 edition = "2021"
 description = "Utility for random grouping."
