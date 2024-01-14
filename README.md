@@ -29,6 +29,10 @@ for i in 0..result.len() {
 
 ## What's New
 
+v0.3.1
+
+* Minor refactoring.
+
 v0.3.0
 
 * `must_use` annotations are added at `RandomGrouping`.
