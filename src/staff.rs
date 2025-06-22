@@ -1,3 +1,5 @@
+//! Provider of [`Staff`].
+
 use std::ops::{Deref, DerefMut};
 
 /// A pointer type that owns or borrows data.
@@ -22,7 +24,7 @@ impl<'a, T: ?Sized> Staff<'a, T> {
     }
 }
 
-impl<'a, T: ?Sized> Deref for Staff<'a, T> {
+impl<T: ?Sized> Deref for Staff<'_, T> {
     type Target = T;
 
     fn deref(&self) -> &Self::Target {
@@ -33,7 +35,7 @@ impl<'a, T: ?Sized> Deref for Staff<'a, T> {
     }
 }
 
-impl<'a, T: ?Sized> DerefMut for Staff<'a, T> {
+impl<T: ?Sized> DerefMut for Staff<'_, T> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         match self {
             Self::Own(x) => x.deref_mut(),

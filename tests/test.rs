@@ -2,10 +2,9 @@ mod for_test;
 
 use crate::for_test::helper::*;
 use crate::for_test::samples::*;
-use random_grouping::RandomGrouping;
-use random_grouping::SizeRounding;
+use random_grouping::prelude::*;
 use std::iter;
-use test_panic::*;
+use test_panic::prelude::*;
 
 #[test]
 fn new() {

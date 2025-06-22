@@ -1,3 +1,5 @@
+//! Provider of [`SizeRounding`].
+
 /// Rounding strategy for group size.
 ///
 /// This enum is used for group size calculation in

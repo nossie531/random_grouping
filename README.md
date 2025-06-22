@@ -29,6 +29,11 @@ for i in 0..result.len() {
 
 ## What's New
 
+v0.4.0
+* Rust edition is updated to 2024.
+* Add `prelude` module (Although this crate is very small).
+* Polish documentations.
+
 v0.3.1
 
 * Minor refactoring.

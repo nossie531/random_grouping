@@ -1,3 +1,5 @@
+//! Provider of [SizedIter].
+
 /// Sized Iterator.
 ///
 /// Iterator adapter that complements [`size_hint`](Iterator::size_hint). This
@@ -32,7 +34,7 @@ impl<'a, T> SizedIter<'a, T> {
     }
 }
 
-impl<'a, T> Iterator for SizedIter<'a, T> {
+impl<T> Iterator for SizedIter<'_, T> {
     type Item = T;
 
     fn next(&mut self) -> Option<Self::Item> {

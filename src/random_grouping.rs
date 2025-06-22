@@ -1,3 +1,5 @@
+//! Provider of [`RandomGrouping`].
+
 use crate::size_rounding::SizeRounding;
 use crate::sized_iter::SizedIter;
 use crate::staff::Staff;
