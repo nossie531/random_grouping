@@ -1,15 +1,12 @@
 //! Provider of [`RandomGrouping`].
 
-use crate::size_rounding::SizeRounding;
+use crate::prelude::*;
 use crate::sized_iter::SizedIter;
 use crate::staff::Staff;
-use rand::rngs::ThreadRng;
+use rand::prelude::*;
 use rand::seq::index::sample;
-use rand::seq::SliceRandom;
-use rand::RngCore;
-use rand::SeedableRng;
 use rand_pcg::Pcg32;
-use simple_scan::IteratorSimpleScanExt;
+use simple_scan::prelude::*;
 use std::collections::BTreeMap;
 
 /// Random grouping executor.
@@ -19,7 +16,7 @@ use std::collections::BTreeMap;
 /// # Examples
 ///
 /// ```
-/// # use random_grouping::RandomGrouping;
+/// # use random_grouping::prelude::*;
 /// let mut rg = RandomGrouping::new();
 /// let samples = (0..10).collect::<Vec<_>>();
 /// let ratios = [0.3, 0.3, 0.2];

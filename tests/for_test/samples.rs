@@ -1,6 +1,6 @@
-use rand::{Rng, SeedableRng};
+use rand::prelude::*;
 use rand_pcg::Pcg32;
-use random_grouping::RandomGrouping;
+use random_grouping::prelude::*;
 use static_assertions::const_assert;
 
 const SAMPLE_SIZE: usize = 30;

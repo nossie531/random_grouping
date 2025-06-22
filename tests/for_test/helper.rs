@@ -1,5 +1,5 @@
 use crate::for_test::samples::*;
-use random_grouping::RandomGrouping;
+use random_grouping::prelude::*;
 use std::collections::HashSet;
 use std::hash::Hash;
 
