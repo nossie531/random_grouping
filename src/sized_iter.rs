@@ -1,4 +1,4 @@
-//! Provider of [SizedIter].
+//! Provider of [`SizedIter`].
 
 /// Sized Iterator.
 ///
