@@ -27,34 +27,6 @@ for i in 0..result.len() {
 }
 ```
 
-## What's New
+## Versions
 
-v0.4.1
-
-* Minor refactoring.
-
-v0.4.0
-
-* Rust edition is updated to 2024.
-* Add `prelude` module (Although this crate is very small).
-* Polish documentations.
-
-v0.3.1
-
-* Minor refactoring.
-
-v0.3.0
-
-* `must_use` annotations are added at `RandomGrouping`.
-
-v0.2.3
-
-* Bug fix: Remove unwanted Debug output.
-
-v0.2.0
-
-* The default value of `stable` has been changed to `true` from `false`.
-* The first argument of `divide_by_size` and `divide_by_ratio` is changed to
-  `IntoIterator` from slice.
-* Instead, `divide_slice_by_size` and `divide_slice_by_ratio` are introduced
-  (which are faster for slices).
+See [CHANGELOG](CHANGELOG.md).
